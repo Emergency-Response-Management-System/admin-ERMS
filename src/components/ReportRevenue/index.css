@@ -1,0 +1,31 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Tối đa 2 cột, mỗi cột tối thiểu 300px */
+  gap: 16px; /* Khoảng cách giữa các phần tử */
+  padding: 16px;
+  justify-content: center; /* Căn giữa các phần tử khi số lượng ít */
+}
+
+.grid-item {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background: #FFF;
+}
+
+/* Tablet: 1 cột */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Chuyển sang 1 cột */
+    padding: 12px;
+  }
+}
+
+/* Mobile: 1 cột với padding nhỏ hơn */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Chuyển sang 1 cột */
+    padding: 8px; /* Giảm padding trên mobile */
+  }
+}
